@@ -19,7 +19,6 @@ export default function StarRating({
           key={i} 
           selected={selectedStars > i} 
           onSelect={() => {
-              debugger;
               onRate(i+1)
           }}
         />

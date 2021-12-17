@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
-import { ColorContext } from "./";
+import React from "react";
 import Color from "./Color";
+import { useColors } from "./color-hooks";
 
 export default function ColorList() { 
-    const { colors } = useContext(ColorContext);
+    debugger;
+    const { colors } = useColors();
     
     if(!colors.length) return <div>표시할 색이 없습니다.</div>;
     return (

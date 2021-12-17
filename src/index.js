@@ -1,16 +1,21 @@
 import React, { createContext } from 'react';
-import colors from "./color-data";
+import ColorProvider from "./color-hooks.js";
 import { render } from 'react-dom';
 import App from './App';
 
-export const ColorContext = createContext();
-
 render(
-  <ColorContext.Provider value={{ colors }}>
+  <ColorProvider>
     <App />
-  </ColorContext.Provider>,
+  </ColorProvider>,
   document.getElementById("root")
-);
+)
+
+// render(
+//   <ColorContext.Provider value={{ colors }}>
+//     <App />
+//   </ColorContext.Provider>,
+//   document.getElementById("root")
+// );
 
 
 
